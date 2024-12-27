@@ -1,0 +1,82 @@
+<!-- Index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me: Adam Azril</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking the CSS file -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Adam Azril Bin Ahmad Azli</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="home">
+            <article>
+                <h2>About Me</h2>
+                <p>Greetings everyone. My name is Adam Azril Bin Ahmad Azli. You can call me Adam or Azril. I'm currently studying Diploma in Information Technology, 4th Semester at UNIRAZAK. This is actually my first time using HTML, and I am excited to learn other programming languages.</p>
+            </article>
+        </section>
+        <section id="projects">
+            <article>
+                <h2>My Hobbies</h2>
+                <ul>
+                    <li>Learning about programming languages (HTML, CSS, Python, JavaScript, C+).</li>
+                    <li>Drawing characters and scenery.</li>
+                    <li>Reading world history.</li>
+                </ul>
+                <h3>My Most-Liked Project</h3>
+                <p>My most-liked project is learning and developing a program using programming languages such as HTML, CSS, and Java, which has improved my coding skills.</p>
+            </article>
+        </section>
+        <section id="interactive">
+            <article>
+                <h2>Interactive Greeting</h2>
+                <button id="greetButton">Click for a Greeting</button>
+                <div id="greeting"></div>
+            </article>
+        </section>
+        <section id="contact">
+            <article>
+                <h2>My Contact</h2>
+                <p>If you want to start a conversation or have a question, reach me via <a href="mailto:adam.azril@ur.unirazak.edu.my">adam.azril@ur.unirazak.edu.my</a></p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 HTML Beginner</p>
+    </footer>
+
+    <script>
+        document.getElementById('greetButton').addEventListener('click', function () {
+            // Prompt the user for their name
+            const userName = prompt('What is your name?');
+
+            // If the user cancels the prompt, stop further execution
+            if (!userName) return;
+
+            // Display a personalized greeting
+            const greetingDiv = document.getElementById('greeting');
+            greetingDiv.textContent = `Hello, ${userName}! Welcome to my page!`;
+
+            // Change styles for the greeting
+            greetingDiv.style.color = 'blue';
+            greetingDiv.style.fontSize = '24px';
+            greetingDiv.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>
